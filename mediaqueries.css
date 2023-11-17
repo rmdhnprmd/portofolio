@@ -41,6 +41,21 @@
   .about-containers {
     margin-top: 0;
   }
+  .about-containers.project-containers {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .color-container {
+    width: 50%;
+  }
+
+  #contact {
+    height: 65vh;
+  }
+  footer {
+    height: 35vh;
+  }
 }
 
 @media screen and (max-width: 600px) {
