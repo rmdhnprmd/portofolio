@@ -10,6 +10,12 @@
 }
 
 @media screen and (max-width: 1200px) {
+  body{
+    cursor: default;
+  }
+  .cursor-dot, .cursor-outline {
+    display:none;
+  }
   #desktop-nav {
     display: none;
   }
