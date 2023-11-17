@@ -9,10 +9,35 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  cursor: none;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
+} */
+
+/* Cursor Custom */
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(53, 53, 53);
+}
+
+.cursor-outline {
+  width: 45px;
+  height: 45px;
+  border: 0.2rem solid rgb(53, 53, 53);
 }
 
 p {
@@ -59,8 +84,16 @@ a:hover {
   font-size: 2rem;
 }
 
-.logo:hover {
+/* .logo:hover {
   cursor: default;
+} */
+
+.hover-card {
+  transition: all 0.4s;
+}
+
+.hover-card:hover{
+  transform: translateY(-1.2rem);
 }
 
 /* Hamburger Menu */
@@ -192,6 +225,37 @@ section {
   text-align: center;
 }
 
+.animated-title {
+  min-width: 280px;
+}
+
+.animated-title span {
+  position: relative;
+}
+
+.animated-title span::before {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  background: rgb(0, 0, 0);
+  height: 50px;
+  width: 4.5px;
+  border-radius: 10px;
+  transform: translateY(-45%);
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.animated-title span.stop-blinking::before {
+  animation: none;
+}
+
 #socials-container {
   display: flex;
   justify-content: center;
@@ -271,8 +335,20 @@ section {
   display: flex;
 }
 
-.about-pic {
+.about-pic-container{
+  flex-shrink: 0;
+  overflow: hidden;
   border-radius: 2rem;
+}
+
+.about-pic {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.about-pic:hover {
+  transform: scale(1.1);
 }
 
 .arrow {
