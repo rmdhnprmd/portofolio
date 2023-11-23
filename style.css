@@ -351,6 +351,11 @@ section {
   transform: scale(1.1);
 }
 
+.text-container {
+  text-align: justify;
+  line-height: 1.6;
+}
+
 .arrow {
   position: absolute;
   right: -5rem;
